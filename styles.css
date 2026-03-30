@@ -1,0 +1,74 @@
+/* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f7f7f7;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Center content */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+/* Form styling */
+form label {
+    font-weight: bold;
+}
+
+form select {
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Results boxes */
+.result-box {
+    padding: 15px;
+    background: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    margin-bottom: 20px;
+}
+
+.warning-box {
+    padding: 15px;
+    background: #fff8e1;
+    border-left: 5px solid #ff9800;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Questionnaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/heroicons@1.0.6/dist/heroicons.min.js"></script>
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center py-10">
+
+<div class="w-full max-w-3xl mx-auto bg-white shadow-2xl rounded-2xl p-10">
+    <h1 class="text-4xl font-bold text-center text-blue-700 mb-8">Discover Your Learning Style</h1>
+    <p class="text-center text-gray-700 mb-6">Answer the questions below to help us recommend strategies that suit your unique way of learning.</p>
+
+    <!-- Progress Bar -->
+    <div class="w-full bg-gray-300 rounded-full h-4 mb-6">
+        <div id="progressBar" class="bg-blue-500 h-4 rounded-full w-0 transition-all duration-500"></div>
+    </div>
+
+    <form id="quizForm" class="space-y-6">
+        <!-- Question 1 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-blue-600 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                1. How do you prefer to learn new material?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q1">
+                <option value="Visual">Watch videos/pictures</option>
+                <option value="Auditory">Listen to explanations</option>
+                <option value="Kinesthetic">Do activities</option>
+            </select>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-green-600 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                2. How do you best remember information?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q2">
+                <option value="Visual">Reading notes</option>
+                <option value="Auditory">Saying it aloud</option>
+                <option value="Kinesthetic">Doing it physically</option>
+            </select>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-yellow-500 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                </svg>
+                3. Do you have difficulty reading or spelling?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q3">
+                <option value="">Select</option>
+                <option value="Dyslexia">Yes</option>
+                <option value="">No</option>
+            </select>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-red-500 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                </svg>
+                4. Do you find it hard to focus or pay attention for long periods?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q4">
+                <option value="">Select</option>
+                <option value="ADHD">Yes</option>
+                <option value="">No</option>
+            </select>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-purple-600 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                </svg>
+                5. Do you struggle with numbers or calculations?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q5">
+                <option value="">Select</option>
+                <option value="Dyscalculia">Yes</option>
+                <option value="">No</option>
+            </select>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-pink-500 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                </svg>
+                6. Do you have trouble organizing your writing?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q6">
+                <option value="">Select</option>
+                <option value="Dysgraphia">Yes</option>
+                <option value="">No</option>
+            </select>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 p-4 bg-gray-50 rounded-xl animate-fadeIn">
+            <label class="font-semibold text-gray-800 flex items-center">
+                <svg class="w-6 h-6 text-teal-600 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                </svg>
+                7. Do you prefer hands-on experiments over reading or listening?
+            </label>
+            <select class="w-full p-3 border rounded-lg mt-2" name="q7">
+                <option value="">Select</option>
+                <option value="Kinesthetic">Yes</option>
+                <option value="">No</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl shadow-lg hover:from-purple-600 hover:to-blue-500 transition-all duration-300 font-semibold text-lg mt-4">
+            Show Results
+        </button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
